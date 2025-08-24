@@ -1,15 +1,32 @@
-let saveEl = document.getElementById("save-el")
-let countEl = document.getElementById("count-el")
-let count = 0
+let scoreHome = document.getElementById("score-home")
+let scoreGuest = document.getElementById("score-guest")
+let score = 0
 
-function increment() {
-    count += 1
-    countEl.textContent = count
+function victoryHome() {
+    score += 1
+    scoreHome.textContent = score
 }
 
-function save() {
-    let countStr = count + " - "
-    saveEl.textContent += countStr
-    countEl.textContent = 0
-    count = 0
+function defeatHome() {
+    score -= 1
+    scoreHome.textContent = score
+}
+
+function divaHome() {
+    score += 2
+    scoreHome.textContent = score
+}
+function victoryAway() {
+    score += 1
+    scoreGuest.textContent = score
+}
+
+function defeatAway() {
+    score -= 1
+    scoreGuest.textContent = score
+}
+
+function divaAway() {
+    score += 2
+    scoreGuest.textContent = score
 }
